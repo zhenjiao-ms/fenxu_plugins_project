@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.DocAsCode.DataContracts.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.DocAsCode.DataContracts.Common.Constants.PropertyName">
+            <summary>
+            TODO: add other property name const
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.Common.IOverwriteDocumentViewModel.Uid">
+            <summary>
+            The uid for this overwrite document, as defined in YAML header
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.Common.IOverwriteDocumentViewModel.Conceptual">
+            <summary>
+            The markdown content from the overwrite document
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.Common.IOverwriteDocumentViewModel.Documentation">
+            <summary>
+            The details for current overwrite document, containing the start/end line numbers, file path, and git info.
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.Common.SourceDetail.Href">
+            <summary>
+            The url path for current source, should be resolved at some late stage
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.Common.SourceDetail.Path">
+            <summary>
+            The local path for current source, should be resolved to be relative path at some late stage
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.Common.SourceDetail.IsExternalPath">
+            <summary>
+            The external path for current source if it is not locally available
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.DocAsCode.Build.Common</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.DocAsCode.Build.Common.OverwriteDocumentModel.Uid">
+            <summary>
+            The uid for this overwrite document, as defined in YAML header
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.Build.Common.OverwriteDocumentModel.Conceptual">
+            <summary>
+            The markdown content from the overwrite document
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.Build.Common.OverwriteDocumentModel.Documentation">
+            <summary>
+            The details for current overwrite document, containing the start/end line numbers, file path, and git info.
+            </summary>
+        </member>
+        <member name="M:Microsoft.DocAsCode.Build.Common.OverwriteDocumentReader.Transform``1(Microsoft.DocAsCode.Plugins.FileModel,System.String,System.Func{``0,``0})">
+            <summary>
+            TODO: use Attributes to automatically markup and handle uid inside the model instead of pass in the itemBuilder action
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="model"></param>
+            <param name="itemBuilder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.DocAsCode.Build.Common.OverwriteDocumentReader.PlaceholderValueDeserializer.DeserializeValue(YamlDotNet.Core.EventReader,System.Type,YamlDotNet.Serialization.Utilities.SerializerState,YamlDotNet.Serialization.IValueDeserializer)">
+            <summary>
+            AWARENESS: not thread safe
+            </summary>
+            <param name="reader"></param>
+            <param name="expectedType"></param>
+            <param name="state"></param>
+            <param name="nestedObjectDeserializer"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

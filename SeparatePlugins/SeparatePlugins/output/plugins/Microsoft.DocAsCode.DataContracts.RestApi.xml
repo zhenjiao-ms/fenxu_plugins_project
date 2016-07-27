@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.DocAsCode.DataContracts.RestApi</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.DocAsCode.DataContracts.RestApi.RestApiChildItemViewModel.OperationName">
+            <summary>
+            operation name, for example get, put, post, delete, options, head and patch.
+            </summary>
+        </member>
+        <member name="P:Microsoft.DocAsCode.DataContracts.RestApi.RestApiRootItemViewModel.Raw">
+            <summary>
+            The original swagger.json content
+            `_` prefix indicates that this metadata is generated
+            </summary>
+        </member>
+    </members>
+</doc>

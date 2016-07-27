@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8661663C-32D3-44B7-8F42-4DA57F0809F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.DocAsCode.Sample.Plugins</RootNamespace>
+    <AssemblyName>Microsoft.DocAsCode.Sample.Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DocAsCode.Build.Common">
+      <HintPath>..\packages\Microsoft.DocAsCode.Build.Common.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.Build.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.Common">
+      <HintPath>..\packages\Microsoft.DocAsCode.Common.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.DataContracts.Common">
+      <HintPath>..\packages\Microsoft.DocAsCode.DataContracts.Common.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.DataContracts.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.DataContracts.ManagedReference">
+      <HintPath>..\packages\Microsoft.DocAsCode.DataContracts.ManagedReference.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.DataContracts.ManagedReference.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.DataContracts.RestApi">
+      <HintPath>..\packages\Microsoft.DocAsCode.DataContracts.RestApi.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.DataContracts.RestApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.Dfm">
+      <HintPath>..\packages\Microsoft.DocAsCode.Dfm.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.Dfm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.Glob">
+      <HintPath>..\packages\Microsoft.DocAsCode.Glob.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.Glob.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.MarkdownLite">
+      <HintPath>..\packages\Microsoft.DocAsCode.MarkdownLite.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.MarkdownLite.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.Plugins">
+      <HintPath>..\packages\Microsoft.DocAsCode.Plugins.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.Utility">
+      <HintPath>..\packages\Microsoft.DocAsCode.Utility.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DocAsCode.YamlSerialization">
+      <HintPath>..\packages\Microsoft.DocAsCode.YamlSerialization.2.3.0-alpha-0436-g659d2ce\lib\net45\Microsoft.DocAsCode.YamlSerialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Convention">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Hosting">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.Runtime">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts">
+      <HintPath>..\packages\Microsoft.Composition.1.0.27\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet">
+      <HintPath>..\packages\YamlDotNet.Signed.3.7.0\lib\net35\YamlDotNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MarkdownLocalizationValidatorProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PluginsFolder>$(MSBuildProjectDirectory)\output\plugins\</PluginsFolder>
+  </PropertyGroup>
+  <Target Name="CopyFilesToDrop" AfterTargets="Build">
+    <Exec Command='rd /q /s "$(PluginsFolder)"' Condition="Exists($(PluginsFolder)) and $(PluginsFolder) != $(OutputPath)"/>
+    <Exec Command='md "$(PluginsFolder)"' Condition="!Exists($(PluginsFolder))" />
+    <Exec Command='xcopy "$(OutputPath)*.*" "$(PluginsFolder)*.*" /E' Condition="$(PluginsFolder) != $(OutputPath)"/>
+  </Target>
+</Project>

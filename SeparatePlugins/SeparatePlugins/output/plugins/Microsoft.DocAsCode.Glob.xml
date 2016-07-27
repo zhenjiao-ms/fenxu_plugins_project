@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.DocAsCode.Glob</name>
+    </assembly>
+    <members>
+        <member name="F:Microsoft.DocAsCode.Glob.GlobMatcher.ExpandGlobStarRegex">
+            <summary>
+            start with * and has more than one * and followed by anything except * or /
+            </summary>
+        </member>
+        <member name="F:Microsoft.DocAsCode.Glob.GlobMatcher.QuestionMarkToRegex">
+            <summary>
+            Any character other than /
+            </summary>
+        </member>
+        <member name="F:Microsoft.DocAsCode.Glob.GlobMatcher.SingleStarToRegex">
+            <summary>
+            Any number of character other than /, non-greedy mode
+            </summary>
+        </member>
+        <member name="M:Microsoft.DocAsCode.Glob.GlobMatcher.GetRegex">
+            <summary>
+            Currently not used
+            TODO: add test case
+            </summary>
+            <param name="glob"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.DocAsCode.Glob.GlobMatcher.ConvertSingleGlobPart(System.String)">
+            <summary>
+            Convert each part to Regex
+            </summary>
+            <param name="globPart">Part of glob that does not contain '/'</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.DocAsCode.Glob.GlobMatcher.ExpandGlobStarShortcut(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            ** matches everything including "/" only when ** is after / or is the start of the pattern
+            ** between characters has the same meaning as *
+            **.cs equals to **/*.cs
+            a**.cs equals to a*.cs
+            </summary>
+            <param name="globParts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.DocAsCode.Glob.GlobMatcher.ExpandGroup(System.String,Microsoft.DocAsCode.Glob.GlobMatcherOptions)">
+            <summary>
+            {a,b}c => [ac, bc]
+            </summary>
+            <param name="pattern"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.DocAsCode.Glob.GlobMatcher.CharClass">
+            <summary>
+            Represents [] class
+            </summary>
+        </member>
+        <member name="F:Microsoft.DocAsCode.Glob.GlobMatcherOptions.AllowDotMatch">
+            <summary>
+            Allow patterns to match filenames starting with a period even if the pattern does not explicitly have a period.
+            By default disabled: a/**/b will **not** match a/.c/d, unless `AllowDotMatch` is set
+            </summary>
+        </member>
+    </members>
+</doc>
