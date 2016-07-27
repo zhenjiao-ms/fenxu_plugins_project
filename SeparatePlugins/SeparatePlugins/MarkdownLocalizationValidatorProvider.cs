@@ -15,8 +15,8 @@
     {
         public const string ContractName = "sample_plugins";
         public readonly char[] SpecialCharacters = { '#', '$', '^', '&', '%', '+' };
-        public const string SpecialCharacterErrorMessageTemplate = "Special Character found here:'{0}'. Please review and block the text if it should not be localized.";
-        public const string PathErrorMessageTemplate = "Seems like a path here:'{0}'. Please review and block the text if it should not be localized.";
+        public const string SpecialCharacterErrorMessageTemplate = "Sample plugins warning: Special Character found here:'{0}'. Please review and block the text if it should not be localized.";
+        public const string PathErrorMessageTemplate = "Sample plugins warning: Seems like a path here:'{0}'. Please review and block the text if it should not be localized.";
 
         // unix path regex: / following with any character excluding /, space, \n and , 
         private readonly Regex unixPathRegex = new Regex(@"\/([^\/\s\,\n]+(\/)?)+", RegexOptions.Compiled);
